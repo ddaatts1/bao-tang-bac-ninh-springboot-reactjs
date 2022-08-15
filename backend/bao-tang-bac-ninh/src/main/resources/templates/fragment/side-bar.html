@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- Sidebar  -->
+<nav th:fragment="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <h3>Bảo tàng Bắc Ninh</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+        <!--      <p>Dummy Heading</p>-->
+        <li class="active">
+            <a href="#tintuc" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tin tức - Sự kiện</a>
+            <ul class="collapse list-unstyled" id="tintuc">
+                <li>
+                    <a th:href="@{/admin/show(category = Tin_Noi_Bat)}">Tin nổi bật</a>
+
+                </li>
+                <li>
+                    <a th:href="@{/admin/show(category=Su_Kien_Sap_Dien_Ra)}">Sự kiện sắp diễn ra</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="active">
+            <a href="#trungbay" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Trưng bày</a>
+            <ul class="collapse list-unstyled" id="trungbay">
+                <li>
+                    <a th:href="@{/admin/show(category = Trung_Bay_Thuong_Xuyen)}">Trưng bày thường xuyên</a>
+
+                </li>
+                <li>
+                    <a th:href="@{/admin/show(category=Trung_Bay_Chuyen_De)}">Trưng bày chuyên đề</a>
+                </li>
+                <li>
+                    <a th:href="@{/admin/show(category=Trung_Bay_Luu_Dong)}">Trưng bày lưu động</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="active">
+            <a href="#nghiencuu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Nghiên cứu - Sưu tầm</a>
+            <ul class="collapse list-unstyled" id="nghiencuu">
+                <li>
+                    <a th:href="@{/admin/show(category = Khai_Quat_khao_Co_Hoc)}">Khai quật khảo cổ học</a>
+
+                </li>
+                <li>
+                    <a th:href="@{/admin/show(category=Cong_tac_Suu_Tam)}">Công tác sưu tầm</a>
+                </li>
+                <li>
+                    <a th:href="@{/admin/show(category=De_Tai_Khoa_Hoc_An_Pham)}">Đề tài khoa học ấn phẩm</a>
+                </li>
+                <li>
+                    <a th:href="@{/admin/show(category=Kiem_Thuc_Lich_Su_Van_Hoa)}">Kieend thức lịch sử văn hóa</a>
+                </li>
+            </ul>
+        </li>
+
+
+        <li class="active">
+            <a href="#hienvat" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">HIện vật</a>
+            <ul class="collapse list-unstyled" id="hienvat">
+                <li>
+                    <a th:href="@{/admin/show(category = Bao_Vat_Quoc_Gia)}">Bảo vật quốc gia</a>
+
+                </li>
+                <li>
+                    <a th:href="@{/admin/show(category=Cac_Bo_Suu_Tap)}">Các bộ sưu tập</a>
+                </li>
+                <li>
+                    <a th:href="@{/admin/show(category=Hien_Vat_Tieu_Bieu)}">hiện vật tiêu biểu</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="active">
+            <a href="#giaoduc" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Giáo dục</a>
+            <ul class="collapse list-unstyled" id="giaoduc">
+                <li>
+                    <a th:href="@{/admin/show(category = Huong_Dan_Tham_Quan)}">hướng dẫn tham quan</a>
+
+                </li>
+                <li>
+                    <a th:href="@{/admin/show(category=Hoat_Dong_Giao_Duc)}">Hoạt động giáo dục</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="active">
+            <a href="#gt" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Giới thiệu</a>
+            <ul class="collapse list-unstyled" id="gt">
+                <li>
+                    <a th:href="@{/admin/addIntroduction(category = Gioi_Thieu_Chung)}">Giới thiệu chung</a>
+
+                </li>
+                <li>
+                    <a th:href="@{/admin/addIntroduction(category=Co_Cau_To_Chuc_So_So_CCTC)}">Cơ cấu tổ chức - sơ đồ CCTC</a>
+                </li>
+                <li>
+                    <a th:href="@{/admin/addIntroduction(category=Chuc_Nang_Nhiem_Vu)}">Chức năng, nhiệm vụ</a>
+                </li>
+            </ul>
+        </li>
+
+
+
+    </ul>
+</nav>
+
+
+<nav th:fragment="rightSideBar" class="rightSideBar">
+    <div><span style="text-align: center;">GIỜ THAM QUAN</span><br>
+        - Từ Chủ nhật đến thứ 6 hàng tuần<br>
+        <b>Sáng </b>: 8h00 đến 11h30<br>
+        <b>Chiều</b> :<br>
+        + 14h00 đến 16h30 (mùa Đông)<br>
+        + 14h00 đến 17h00 (mùa Hè)</div>
+    <div style="padding:20px;"><span style="font-size:larger ;text-align: center;" >
+        Nội quy tham quan</span>
+       </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.2006651761862!2d106.07260221540379!3d21.184186087828913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350c1aa1f69db7%3A0x18777f4d0e185716!2sB%E1%BA%AFc%20Ninh%20Museum!5e0!3m2!1sen!2s!4v1648437623381!5m2!1sen!2s" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+</nav>
+
+</body>
+</html>
