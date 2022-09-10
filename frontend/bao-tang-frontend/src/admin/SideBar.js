@@ -42,7 +42,6 @@ export default function SideBar() {
                     </ul>
                 </li>
 
-
             </ul>
 
         </nav>

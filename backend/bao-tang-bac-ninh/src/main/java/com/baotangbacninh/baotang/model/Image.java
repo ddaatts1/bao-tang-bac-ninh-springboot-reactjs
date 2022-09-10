@@ -6,13 +6,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "image")
-public class Image {
-
+public class Image   {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;

@@ -23,7 +23,7 @@ import java.util.Arrays;
 
 @Controller
 @RequestMapping("/admin")
-public class AdminControllerdd {
+public class AdminControllerr {
 
     @Autowired
     PostsService postsService;
@@ -117,7 +117,7 @@ public class AdminControllerdd {
 
     @GetMapping("/remove/{PostsId}")
     public String removePosts(@PathVariable int PostsId, Model model) {
-        Category category = postsService.findById(PostsId).getPostsCategory();
+        Category category = postsService.findById(PostsId).get().getPostsCategory();
         postsService.removeposts(PostsId);
         return show(model, category, 1);
     }

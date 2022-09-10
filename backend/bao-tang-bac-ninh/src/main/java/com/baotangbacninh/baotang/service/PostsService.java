@@ -16,7 +16,7 @@ public interface PostsService {
 
     void removeposts(int id);
 
-    Posts findById(int id);
+    Optional<Posts> findById(int id);
 
     void updatePosts(int id, Posts posts);
 

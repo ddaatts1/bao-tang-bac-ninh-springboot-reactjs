@@ -1,6 +1,7 @@
 package com.baotangbacninh.baotang.model;
 
 import com.baotangbacninh.baotang.Enum.Category;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -38,8 +39,8 @@ public class Posts {
     Category postsCategory;
     @Column(name = "date")
     LocalDate date;
-    @Transient
-    @OneToMany(mappedBy = "posts")
+    @JsonIgnore
+    @OneToMany(mappedBy = "posts",fetch = FetchType.EAGER)
     List<Image> imageList;
 
 

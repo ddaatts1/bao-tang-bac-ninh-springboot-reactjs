@@ -3,7 +3,7 @@ import TableContent from "./TableContent";
 import './Admin.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Helmet } from "react-helmet";
-import { BrowserRouter, BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import React from "react";
 
 function useQuery() {

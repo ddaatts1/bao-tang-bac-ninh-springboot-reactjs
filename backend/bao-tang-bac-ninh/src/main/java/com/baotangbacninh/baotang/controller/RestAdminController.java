@@ -23,7 +23,7 @@ import java.util.Arrays;
 @RestController
 @RequestMapping("/adminn")
 @CrossOrigin
-public class AdminController {
+public class RestAdminController {
     @Autowired
     PostsService postsService;
     @Value("${file.path}")

@@ -10,9 +10,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<HomePage />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/:category" element={<HomePage />}></Route>
+        <Route path="/:category/:id" element={<HomePage />}></Route>
         <Route path='/admin' element={<AdminPage />} ></Route>
-        <Route path='/table' element={<TableContent />}></Route>
         <Route path='/admin/add' element={<AddPosts />}></Route>
 
       </Routes>

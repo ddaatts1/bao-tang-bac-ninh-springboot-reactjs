@@ -44,8 +44,8 @@ public class PostsServiceImpl implements PostsService {
     }
 
     @Override
-    public Posts findById(int id){
-        return postsRepository.findById(id).get();
+    public Optional<Posts> findById(int id){
+        return postsRepository.findById(id);
     }
 
     @Override
