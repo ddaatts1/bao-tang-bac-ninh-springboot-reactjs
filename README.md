@@ -26,9 +26,13 @@ Maybe you can mention me or this repo in the acknowledgements too
 <li>category : Tin_Noi_Bat</li>
 <li>page : 1</li>
 </ul>
+
+
 ```bash
 https://7wm9gm3k91.execute-api.us-east-1.amazonaws.com/Posts/Tin_Noi_Bat?page=1
 ```
+
+
 
 /getPosts
 * id = 162
